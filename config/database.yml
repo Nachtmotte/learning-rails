@@ -17,7 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  port: 49154
+  port: 49153
   host: localhost
   username: postgres
   password: postgrespw
