@@ -32,6 +32,12 @@ es:
     index:
       tittle: 'Productos:'
       all: 'Todos'
+      min_price: 'Precio minimo'
+      max_price: 'Precio maximo'
+      query_text: '¿Que quieres buscar?'
+      expensive: 'Más caros'
+      cheapest: 'Más barato'
+      newest: 'Añadidos recientemente'
     show:
       edit: 'Editar producto'
       delete: 'Borrar producto'
