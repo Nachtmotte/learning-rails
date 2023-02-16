@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+    skip_before_action :protect_pages, only: [:index, :show]
+
     def index
         @categories = Category.all.order(name: :asc).load_async
         # @products = Product.all.with_attached_photo
@@ -17,7 +19,7 @@ class ProductsController < ApplicationController
         # order_by = Product::ORDER_BY.fetch(params[:order_by]&.to_sym, Product::ORDER_BY[:newest])
         # @products = @products.order(order_by).load_async
 
-        @pagy, @products = pagy_countless(FindProducts.new.call(params).load_async, items: 12)
+        @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, items: 12)
     end
 
     def show
@@ -55,8 +57,14 @@ class ProductsController < ApplicationController
         redirect_to products_path, notice: t('.destroyed'), status: :see_other
     end
 
+    private
+
     def product_params
         params.require(:product).permit(:tittle, :description, :price, :photo, :category_id)
+    end
+
+    def product_params_index
+        params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
     end
 
     def product 

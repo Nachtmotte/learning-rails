@@ -5,153 +5,179 @@ ps4:
   description: PS4 en buen estado
   price: 150
   category: videogames
+  user: pepe
 
 switch:
   tittle: Nintendo Switch
   description: Le falla el lector de tarjeta SD
   price: 195
   category: videogames
+  user: pepe
 
 nintendo64:
   tittle: Nintendo 64 en buen estado
   description: Con su caja, solo tiene algún pequeño arañazo
   price: 190
   category: videogames
+  user: maria
 
 megadrive:
   tittle: Sega Megadrive
   description: Funciona perfectamente, solo consola
   price: 90
   category: videogames
+  user: maria
 
 driver2:
   tittle: Driver 2 para ps1
   description: Como nuevo en su caja y con instrucciones
   price: 25
   category: videogames
+  user: paco
 
 ps5:
   tittle: PS5 nueva sin lector
   description: A estrenar, usada solo dos veces.
   price: 650
   category: videogames
+  user: paco
 
 gameboy:
   tittle: Game Boy Color
   description: Con su caja. Color morada transparente.
   price: 150
   category: videogames
+  user: pepe
 
 air:
   tittle: Macbook Air
   description: Le falla la batería
   price: 250
   category: computers
+  user: paco
 
 imac:
   tittle: iMac 27" 2015
   description: i5 con 8gb de ram y SSD
   price: 90
   category: computers
+  user: maria
 
 ryzen:
   tittle: Ryzen 5950x
   description: Sin estrenar precintado como nuevo
   price: 590
   category: computers
+  user: pepe
 
 nvidia:
   tittle: Nvidia 3090ti
   description: Solo usada 3 meses la vendo porque no la uso
   price: 1500
   category: computers
+  user: maria
 
 ram:
   tittle: 16GB Ram DDR4 3200mhz
   description: Funciona perfectamente
   price: 95
   category: computers
+  user: pepe
 
 renault:
   tittle: Renault Clio 2009
   description: 85000km, 95cv
   price: 4500
   category: cars
+  user: paco
 
 seat:
   tittle: Seat Panda clásico
   description: Tan solo 90000km, 75cv. Del año 1980
   price: 5500
   category: cars
+  user: pepe
 
 michael:
   tittle: Vinilo Michael Jackson Thriller
   description: Como nuevo a estrenar
   price: 45
   category: music
+  user: paco
 
 queen:
   tittle: Vinilo Queen
   description: Ligeras marcas de uso de los años 80
   price: 35
   category: music
+  user: maria
 
 tv:
   tittle: Televisión LG 48 pulgadas
   description: Viene con smart TV funciona perfectamente
   price: 350
   category: electronic
+  user: pepe
 
 kindle:
   tittle: Lector de libros Kindle 2010
   description: Tiene marcas de uso pero funciona bien
   price: 35
   category: electronic
+  user: paco
 
 ipod:
   tittle: iPod touch
   description: Como nuevo a estrenar con su caja
   price: 175
   category: electronic
+  user: pepe
 
 harry:
   tittle: Colección entera de Harry Potter
   description: Todos los libros de la saga. Bien cuidados!
   price: 65
   category: books
+  user: maria
 
 hobbit:
   tittle: El hobbit
   description: Libro en buen estado
   price: 15
   category: books
+  user: maria
 
 iphone:
   tittle: iPhone 13
   description: Funciona correctamente.
   price: 400
   category: mobile
+  user: pepe
 
 pixel:
   tittle: Google Pixel 4
   description: Le falla la batería
   price: 100
   category: mobile
+  user: paco
 
 surf:
   tittle: Tabla de surf
   description: Usada dos veces. Como nueva.
   price: 125
   category: sports
+  user: maria
 
 tennis:
   tittle: Raqueta de tenis profesional
   description: Fabricada en fibra de carbono. Solo un par de arañazos
   price: 135
   category: sports
+  user: pepe
 
 skate:
   tittle: Skateboard
   description: Como nuevo con las ruedas recién cambiadas
   price: 75
   category: sports
+  user: paco

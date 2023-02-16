@@ -1,29 +1,43 @@
 en:
+  app_name: 'SellIT'
+  meta_title: 'Buy and sell second hand products!'
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
-        tittle: 'tittle'
+        tittle: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
-    errors:
-      models:
-        product:
-          attributes:
-            tittle:
-              blank: "can't be blank"
-            description:
-              blank: "can't be blank"
-            price:
-              blank: "can't be blank"
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+      category:
+        name: 'Name'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
+    not_logged_in: 'You have to login or create an account'
   shared:
     header:
       add: 'Add product'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
+  authentication:
+    users:
+      create:
+        created: 'Your account has been created!'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login!'
+      destroy:
+        destroyed: 'Session ended. Bye!'
   products:
     edit:
       tittle: 'Edit product'

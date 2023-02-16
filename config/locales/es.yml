@@ -1,29 +1,43 @@
 es:
+  app_name: 'Vendelo'
+  meta_title: 'Compra y vende productos de segunda mano'
   activerecord:
     models:
       product: Producto
+      user: Usuario
+      category: Categoría
     attributes:
       product:
         tittle: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
-    errors:
-      models:
-        product:
-          attributes:
-            tittle:
-              blank: 'no puede estar vacío'
-            description:
-              blank: 'no puede estar vacía'
-            price:
-              blank: 'no puede estar vacío'
+      user:
+        email: 'Correo electrónico'
+        username: 'Usuario'
+        password: 'Contraseña'
+      category:
+        name: 'Nombre'
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
+    not_logged_in: 'Tienes que hacer login o crearte una cuenta'
   shared:
     header:
       add: 'Añadir producto'
+      login: 'Acceso'
+      register: 'Registro'
+      logout: 'Salir'
+  authentication:
+    users:
+      create:
+        created: 'Tu cuenta se ha creado!'
+    sessions:
+      create:
+        created: 'Bienvenido!'
+        failed: 'Login inválido!'
+      destroy:
+        destroyed: 'Tu sesión ha terminado! Hasta la próxima'
   products:
     edit:
       tittle: 'Editar producto'
@@ -32,9 +46,9 @@ es:
     index:
       tittle: 'Productos:'
       all: 'Todos'
-      min_price: 'Precio minimo'
-      max_price: 'Precio maximo'
-      query_text: '¿Que quieres buscar?'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
+      query_text: '¿Qué quieres buscar?'
       expensive: 'Más caros'
       cheapest: 'Más barato'
       newest: 'Añadidos recientemente'
