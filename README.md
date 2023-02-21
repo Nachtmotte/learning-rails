@@ -31,15 +31,16 @@ Mainly the styles -> coming soon!
     * POSTGRES_DB: What you want the database to be called.
     * POSTGRES_USER: The user you will use to login to the database.
     * POSTGRES_PASS: The password you will use to login to the database.
-    * RAILS_MASTER_KEY: to generate the master key you will need to execute the following command:
+    * RAILS_MASTER_KEY: To generate the master key you will need to execute the following command:
        ```
        rails credentials:edit
        ``` 
-       this will generate a master.key file in the config folder, copy the value inside and use it for this environment variable.
-    * SENDGRID_DOMAIN: your domain, for example yourdomain.com
+       This will generate a master.key file in the config folder, copy the value inside and use it for this environment variable.
+    * SENDGRID_DOMAIN: Your domain, for example yourdomain.com
     * SENDGRID_FROM: This has to be the email address you set up in Sendgrid as sender.
     * SENDGRID_API_KEY: Your apikey generated in sendgrid.
 * Finally in the root folder run the command:
     ````
     docker-compose up --build
     ````
+    The data loaded in the application comes from the fixtures so if you want to modify the initial app data, take a look at the fixtures.
