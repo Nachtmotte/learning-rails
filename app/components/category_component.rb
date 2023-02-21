@@ -8,7 +8,7 @@ class CategoryComponent < ViewComponent::Base
   end
 
   def title
-    category ? category.name : t('.all')
+    category ? category.name : t(".all")
   end
 
   def link

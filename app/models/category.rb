@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-    validates :name, presence: true
+  validates :name, presence: true
 
-    has_many :products, dependent: :restrict_with_exception
+  has_many :products, dependent: :restrict_with_exception
 end

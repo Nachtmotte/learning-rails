@@ -17,10 +17,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  port: 32768
-  host: localhost
-  username: postgres
-  password: postgrespw
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASS'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -85,6 +84,4 @@ test:
 #
 production:
   <<: *default
-  database: vendelo_production
-  username: vendelo
-  password: <%= ENV["VENDELO_DATABASE_PASSWORD"] %>
+  database: <%= ENV['POSTGRES_DB'] %>

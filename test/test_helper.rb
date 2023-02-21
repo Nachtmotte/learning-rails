@@ -1,7 +1,7 @@
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
-require 'webmock/minitest'
+require "webmock/minitest"
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
@@ -12,6 +12,6 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   def login
-    post sessions_path, params: { login: 'paco@vendelo.com', password: 'testme' }
+    post sessions_path, params: {login: "paco@vendelo.com", password: "testme"}
   end
 end

@@ -1,0 +1,57 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15.1-alpine
+    container_name: vendelo-db-postgres
+    command:
+      "postgres -c 'max_connections=500'"
+    environment:
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASS}
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: 'redis:7.0-alpine'
+    container_name: vendelo-redis
+    command: redis-server
+    ports:
+      - '6379:6379'
+
+  sidekiq:
+    container_name: vendelo-sidekiq
+    depends_on:
+      - 'redis'
+    build: .
+    command: bundle exec sidekiq
+    environment:
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASS: ${POSTGRES_PASS}
+        POSTGRES_HOST: db
+        REDIS_URL: ${REDIS_URL}
+        SENDGRID_FROM: ${SENDGRID_FROM}
+        SENDGRID_DOMAIN: ${SENDGRID_DOMAIN}
+        SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+
+  backend:
+    container_name: vendelo-backend-rails
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "./bin/rails server"
+    depends_on:
+      - 'db'
+      - 'sidekiq'
+    environment:
+        RAILS_ENV: ${RAILS_ENV}
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASS: ${POSTGRES_PASS}
+        POSTGRES_HOST: db
+        RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
+        REDIS_URL: ${REDIS_URL}
+    ports:
+      - 3000:3000
